@@ -1,18 +1,20 @@
-
+var next=0;
 
 function takeANumber(katzDeliLine, newName){
-    katzDeliLine[katzDeliLine.length]=newName;
-    return `Welcome, ${newName}. You are number ${(katzDeliLine.length)} in line.`;
-    //Welcome, Ada. You are number 1 in line.
+    //katzDeliLine[katzDeliLine.length]=newName;
+    //return `Welcome, ${newName}. You are number ${(katzDeliLine.length)} in line.`;
+    //Welcome, Ada. You are number 1 in line
+    next++;
+    return `you are number ${next}`;
 }
 
 function nowServing(katzDeliLine){
   if(katzDeliLine.length ===0){
     return `There is nobody waiting to be served!`;
   }else{
-    var temp =katzDeliLine[0];
-    katzDeliLine=katzDeliLine.shift();
-    return `Currently serving ${temp}.`
+  //  var temp =katzDeliLine[0];
+    //katzDeliLine=;//returns the 
+    return `Currently serving ${katzDeliLine.shift()}.`
   }
 }
 
@@ -21,9 +23,9 @@ function currentLine(katzDeliLine){
     return `The line is currently empty.`;
   }else{
     var temp = "The line is currently: ";
-    for(var i=1; i<=katzDeliLine.length; i++){
-        temp= temp+ `${i}. ${katzDeliLine[i-1]}`;
-        if(katzDeliLine.length>i){
+    for(var i=0; i < katzDeliLine.length; i++){
+        temp= temp+ `${i+1}. ${katzDeliLine[i]}`;
+        if(katzDeliLine.length-1>i){
           temp= temp+`, `
         }
     }
