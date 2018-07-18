@@ -14,7 +14,7 @@ function nowServing(katzDeliLine){
   }else{
   //  var temp =katzDeliLine[0];
     //katzDeliLine=;//returns the 
-    return `Currently serving ${katzDeliLine.shift()}.`
+    return `Currently serving ${katzDeliLine.shift()}.`//shft returns the item removed- not a new array w/o the item
   }
 }
 
